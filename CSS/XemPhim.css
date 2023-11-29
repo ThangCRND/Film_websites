@@ -1,0 +1,164 @@
+.watch-movie {
+   width: 80%;
+   background-color: black;
+}
+
+.watch-title {
+   display: flex;
+   align-items: center;
+   gap: 0.5vw;
+   background-color: grey;
+   font-size: 1.8vw;
+   padding: 0.5vw;
+   color: white;
+}
+
+.watch-title a {
+   color: orange;
+   display: flex;
+   align-items: center;
+   gap: 0.5vw;
+}
+
+.watch-title i {
+   font-size: 1.4vw;
+}
+
+.watch-video {
+   width: 100%;
+   aspect-ratio: 16/9;
+}
+
+.watch-note {
+   font-size: 1.2vw;
+   padding: 0.5vw;
+   margin-bottom: 0.5vw;
+   color: white;
+   border: 1px solid greenyellow;
+}
+
+.hr {
+   display: flex;
+   justify-content: center;
+}
+
+.hr > hr {
+   width: 60%;
+   border: 0.5vw solid grey;
+   border-radius: 0.5vw;
+}
+
+.watch-rate {
+   color: white;
+   font-size: 1.3rem;
+   line-height: 2rem;
+}
+
+.like-share {
+   display: flex;
+   gap: 5px;
+   margin: 10px 0px;
+}
+
+.like-share > span {
+   background-color: blue;
+   padding: 5px;
+   color: #fff;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+#star-container {
+   vertical-align: middle;
+   cursor: pointer;
+   width: 100%;
+   display: flex;
+   margin-bottom: 14px;
+}
+
+.star-widget i {
+   color: #ccc;
+   transition: color 1s ease;
+}
+.star-widget i.active {
+   color: #ff9601;
+}
+
+.hr1 {
+   margin: 1vw 0;
+   width: 100%;
+}
+
+.watch-name {
+   color: white;
+}
+
+.watch-name p {
+   color: orange;
+   font-size: 2rem;
+}
+.watch-name span {
+   font-size: 1.2vw;
+}
+
+.watch-name span a {
+   color: orange;
+}
+
+.fb-comments {
+   background-color: white;
+   margin-top: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+   .watch-movie {
+      width: 90%;
+   }
+
+   .watch-title {
+      font-size: 1.4rem;
+   }
+
+   .watch-note {
+      font-size: 1rem;
+   }
+
+   .watch-name p {
+      font-size: 1.2rem;
+   }
+
+   .watch-name span {
+      font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .watch-movie {
+      width: 90%;
+   }
+
+   .watch-title {
+      font-size: 0.6rem;
+   }
+
+   .watch-note {
+      font-size: 0.6rem;
+   }
+
+   .rate-star i {
+      font-size: small;
+   }
+
+   .watch-name p {
+      font-size: 1rem;
+      
+   }
+
+   .like-share span {
+      font-size: 1rem;
+   }
+
+   .watch-name span {
+      font-size: 0.8rem;
+   }
+}

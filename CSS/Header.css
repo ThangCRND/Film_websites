@@ -1,0 +1,228 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Times New Roman", Times, serif;
+}
+
+body {
+   background-color: rgb(19, 19, 19);
+}
+
+a {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 4vw 0;
+   width: 100%;
+}
+
+#header {
+   position: sticky;
+   width: 100%;
+   z-index: 10;
+   top: 0;
+}
+
+#nav-bar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   height: auto;
+   background-color: black;
+   align-items: center;
+   padding: 0 0.8rem;
+}
+
+#toggler,
+#nav-bar label {
+   display: none;
+}
+
+#nav-bar label {
+   font-size: 2rem;
+   color: white;
+}
+
+.logo {
+   width: 100%;
+   height: 3.5rem;
+}
+
+.main-menu {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   font-weight: 600;
+}
+
+.main-menu li {
+   position: relative;
+   display: flex;
+}
+
+.main-menu li:hover {
+   background-color: rgb(42, 41, 41);
+}
+
+.main-menu li:hover > a {
+   color: orange;
+}
+
+.main-menu li > a {
+   color: white;
+   padding: 1.2rem 0.8rem;
+   display: flex;
+   font-size: 1.2rem;
+   text-align: center;
+}
+
+.sub-menu-1 {
+   position: absolute;
+   background-color: black;
+   width: 10rem;
+   top: 3.6rem;
+   left: 0px;
+   display: none;
+   font-size: 1rem;
+}
+
+.main-menu li:hover > ul.sub-menu-1 {
+   display: block;
+}
+
+.sub-menu {
+   position: absolute;
+   background-color: black;
+   list-style: none;
+   width: 20rem;
+   top: 3.6rem;
+   left: 0px;
+   grid-template-columns: repeat(2, auto);
+   display: none;
+   font-size: 16px;
+}
+
+.sub-menu li > a,
+.sub-menu-1 li > a {
+   padding: 0.6rem 0.8rem;
+   width: 100%;
+   font-size: 1rem;
+}
+
+.main-menu li:hover > ul.sub-menu {
+   display: grid;
+}
+
+#return {
+   position: relative;
+}
+
+#search-box {
+   background-color: white;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   height: 40px;
+}
+
+#search-box #search-text {
+   border: none;
+   outline: none;
+   background: none;
+   height: 40px;
+   font-size: 18px;
+   width: 0;
+   transition: all 0.25s ease-in-out;
+   border-radius: 20px 0px 0px 20px;
+}
+
+#search-box:hover #search-text,
+#search-box #search-text:valid {
+   width: 250px;
+   padding-left: 15px;
+   border: 2px solid orange;
+}
+#search-box:hover .main-menu {
+   display: none;
+}
+#search-box #search-btn {
+   background-color: white;
+   cursor: pointer;
+   border: none;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   font-size: 18px;
+}
+
+#return-search {
+   display: none;
+   position: absolute;
+   background-color: white;
+   padding: 10px;
+   top: 3.1rem;
+   right: -0;
+   left: -60%;
+   max-height: 500px;
+   overflow-y: auto;
+   z-index: 20; /* đặt giá trị z-index để cho nó hiển thị trên các phần tử khác */
+}
+
+#return-search ul {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+#return-search ul li {
+   border: 1px solid black;
+}
+
+#return-search ul li a {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   color: black;
+}
+
+#return-search ul li a:hover {
+   color: orange;
+}
+
+#return-search ul li a div p:hover {
+   color: orange;
+   border-bottom: 1px solid orange;
+}
+
+#return-search ul li a img {
+   width: 30px;
+   height: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+   .main-menu {
+      display: none;
+   }
+
+   #nav-bar label {
+      display: block;
+   }
+
+   #return-search {
+      width: 100%;
+      left: 0;
+   }
+}
